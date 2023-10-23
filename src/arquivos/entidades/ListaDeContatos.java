@@ -34,6 +34,8 @@ public class ListaDeContatos implements Serializable {
         return contatosRecuperados;
     }
 
+
+
     public String toString() {
         String str = "";
         for (Contato contato : contatos) {
@@ -52,5 +54,10 @@ public class ListaDeContatos implements Serializable {
         }
         if (outputStream != null)
             outputStream.close();
+    }
+
+
+    public Contato getContato(int posicao) {
+        return contatos.get(posicao);
     }
 }
